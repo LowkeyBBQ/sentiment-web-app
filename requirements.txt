@@ -2,3 +2,4 @@ tensorflow-cpu==2.3.0
 regex==2020.9.27
 nltk==3.5
 streamlit==0.67.0
+requests==2.24.0
