@@ -25,7 +25,10 @@ with open('tokenizer.json') as f:
     data = json.load(f)
     tokenizer = tf.keras.preprocessing.text.tokenizer_from_json(data)
 
-model = tf.keras.models.load_model("model.h5")
+import requests
+url = 'http://s3.amazonaws.com/sentiment-web-app/model.h5'
+r = requests.get(url, allow_redirects=True)
+model = tf.keras.models.load_model("r.content")
 MAX_SEQUENCE_LENGTH = 30
 def predict(text):
   return model.predict(tf.keras.preprocessing.sequence.pad_sequences(
