@@ -4,6 +4,7 @@ import backend
 st.write("""
 # Text Sentiment Prediction App
 ## Enter text to see its sentiment, predicted by a machine learning model trained on Twitter sentiment data
+Find the GitHub repo including the deep learning model training/testing [here](https://github.com/LowkeyBBQ/sentiment-web-app)
 """)
 
 user_input = st.text_input("Enter your text here", 'The cake is a lie')
